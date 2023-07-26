@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script defer src="js/bootstrap.js"></script>
+</head>
+<body class=" bg-tertiary">
+    <div class="container my-2 col-md-7 col-11">
+        <h1 class="text-center text-decoration-underline text-success my-2">Student Portal</h1>
+
+        <div class="alert alert-info text-center animate__animated animate__flip" id="SuccessfullyUpdated" style="display: none;">Updated Successfully👍</div>
+
+        <div class="alert alert-success text-center animate__animated animate__flip" id="registrationSucceful" style="display: none;">Registration Successful😘</div>
+        <div class="form-floating my-2">
+            <input type="text" class=" form-control" id="studentFirstName" placeholder="your name" required>
+            <label for="studentFirstName" class="ms-2">Enter your first name...</label>
+        </div>
+
+        <div class="form-floating my-2">
+            <input type="text" class=" form-control" id="studentLastName" placeholder="your name" required>
+            <label for="studentLastName" class="ms-2">Enter your last name...</label>
+        </div>
+
+        <div class="form-floating my-2">
+            <input type="number" class=" form-control" id="studentMatric" placeholder="your matric" required maxlength="6">
+            <label for="studentMatric" class="ms-2">Enter your matric...</label>
+        </div>
+        <div class="form-floating my-2">
+            <input type="email" class=" form-control" id="studentEmail" placeholder="your email" required>
+            <label for="studentEmail" class="ms-2">Enter your email...</label>
+        </div>
+        <div class="form-floating my-2">
+            <input type="text" class=" form-control" id="studentDepartment" placeholder="your department" required>
+            <label for="studentDepartment" class="ms-2">Enter your department...</label>
+        </div>
+        <div class="form-floating my-2">
+            <input type="password" class=" form-control" id="studentPassword" placeholder="your password" required>
+            <label for="studentPassword" class="ms-2">Enter your password...</label>
+        </div>
+        <div class="my-2">
+            <button class="btn btn-dark btn-lg mb-2 w-100 rounded-5" onclick="addStudentInfo()">Add Info</button>
+            <div class="alert alert-warning text-center animate__animated animate__headShake" id="Unsuccessful" style="display: none;">Not succesfully updated, Pls fill in the required spaces👎</div>
+            <div class="alert alert-danger text-center animate__animated animate__headShake" id="showErrormessage" style="display: none;">Pls fill in the required spaces😢</div>
+            <div class="alert alert-danger" id="Nostudent">
+                <h1 class="text-center  fw-bolder">No Students has registered</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <table id="show" class="table table-light table-striped"></table>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
